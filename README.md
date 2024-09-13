@@ -24,7 +24,7 @@ The USGS is interested in building a new set of tools that will allow them to vi
 * Part 2: Gather and Plot More Data (Optional)
 
 # Part 1: Create the Earthquake Visualization
-![alt text](images/2-BasicMap.png)
+![alt text](Images/2-BasicMap.png)
 
 Your first task is to visualize an earthquake dataset. Complete the following steps:
 
@@ -32,11 +32,11 @@ Your first task is to visualize an earthquake dataset. Complete the following st
 
    * The USGS provides earthquake data in a number of different formats, updated every five minutes. Visit the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) and choose a dataset to visualize. The following image is an example screenshot of what appears when you visit this link:
   
-![alt text](images/3-Data.png)
+![alt text](Images/3-Data.png)
     
     * When you click a dataset (such as "All Earthquakes from the Past 7 Days"), you will be given a JSON representation of that data. Use the The URL of this JSON to pull in the data for the visualization. The following image is a sampling of earthquake data in JSON format:
   
-  ![alt text](images/4-JSON.png)
+  ![alt text](Images/4-JSON.png)
 
 2. Import and visualize the data by doing the following: 
 
@@ -61,7 +61,7 @@ This part is completely optional; you can complete this part as a way to challen
 
 The following image is an example screenshot of what you should produce:
 
-![alt text](images/5-Advanced.png)
+![alt text](Images/5-Advanced.png)
 
 Perform the following tasks:
 
