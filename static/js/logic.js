@@ -11,7 +11,6 @@ d3.json(queryUrl).then(function(earthquakeData) {
     });
 });
 
-
 function createMarker(feature, latlng) {
     return L.circleMarker(latlng, {
         radius: markerSize(feature.properties.mag),
@@ -29,12 +28,11 @@ function createFeatures(earthquakeData, plateData) {
         layer.bindPopup(`<h3>Location:</h3> ${feature.properties.place}<h3> Magnitude:</h3> ${feature.properties.mag}<h3> Depth:</h3> ${feature.geometry.coordinates[2]}`);
     }
 
-    
     let earthquakes = L.geoJSON(earthquakeData, {
         onEachFeature: onEachFeature,
         pointToLayer: createMarker
     });
-    
+   
     let plates = L.geoJSON(plateData, {
         style: function() {
             return {
@@ -44,6 +42,7 @@ function createFeatures(earthquakeData, plateData) {
         }
     });
 
+    
     createMap(earthquakes, plates);
 }
 
@@ -63,7 +62,7 @@ function createMap(earthquakes, plates) {
         "Topographic Map": topo
     };
 
-    
+    // Create an overlay object .
     let overlayMaps = {
         "Earthquakes": earthquakes,
         "Fault Lines": plates
@@ -76,7 +75,7 @@ function createMap(earthquakes, plates) {
         layers: [street, earthquakes, plates]
     });
 
-    
+   
     L.control.layers(baseMaps, overlayMaps, {
         collapsed: false
     }).addTo(myMap); 
@@ -103,7 +102,6 @@ function createMap(earthquakes, plates) {
         // Add legend to map
         legend.addTo(myMap);
 }
-
 
 function markerSize(magnitude) {
     return magnitude * 5;
